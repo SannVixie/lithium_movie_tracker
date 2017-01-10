@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div(class="ui basic segment")
+    h1(class="ui header")= title
+
+    div(class="ui cards")
+      each m in movies
+
+          a(class="ui padded blue card" href= m.search)
+            div(class="content")
+              div(class="header")= m.title
+              div(class="meta")= m.year
+              image(class="ui centered medium rounded image" src=m.image)
+              div(class="description")= m.overview
